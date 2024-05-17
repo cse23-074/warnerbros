@@ -1,1 +1,260 @@
+*{
+    font-family: 'Montserrat',sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    background-color: #202020;
+}
+body{
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 130vh;
+   margin: 30px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+}
+.logo{
+    margin-left: 60px;
+}
 
+.logo a {
+    text-decoration: none;
+}
+
+.logo img{
+    height: 10vh;
+}
+.logo h3{
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top: -45px;
+    margin-left: 110px;
+}
+.nav ul{
+    display: flex;
+    margin-left: 75px;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul li a{
+    text-decoration: none;
+    padding: 0px 35px;
+    color: rgb(255, 255, 255);
+}
+.nav ul li a:hover{
+    color: rgb(230, 9, 9);
+    font-weight: bolder;
+}
+
+.top-container{
+    background-color: #3c3c3c;
+    border-radius: 30px;
+    height: 400px;
+    padding: 50px;
+    margin: 50px;
+    border: 2px solid red;
+}
+
+.rating{
+    color: yellow;
+    margin-top: 20px;
+}
+
+.beekeeper-info{
+    float: left;
+    width: 40%;
+    padding: 20px;
+    font-size: 18px;
+    color: white;
+}
+
+.beekeeper-info p{
+    flex-direction: column;
+}
+
+.beekeeper .poster iframe{
+    float: right;
+    border-radius: 15px;
+    margin-top: 35px;
+}
+.btn1{
+    margin-top: 30px;
+    
+}
+
+.btn1 a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 25px;
+    background: rgba(255, 0, 0, 0.641);
+    border-radius: 20px;
+}
+.btn1 a:hover{
+    background: rgb(243, 244, 243);
+    color: rgba(255, 0, 0, 0.641);
+}
+
+.cards{
+    /*border: 1px solid red;*/
+    height: fit-content;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.cards .card{
+    position: relative;
+    width: 150px;
+    height: 220px;
+    /*border: 1px solid green;*/
+    margin: 0px 5px;
+}
+
+.cards .card img{
+    border-radius: 10px;
+    /*padding: 10px;*/
+    height: 100%;
+    width: 100%;
+}
+
+.cards .content{
+    top: 0;
+    left: 0;
+    padding: 5px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+.cards .card .content:hover{
+    opacity: 1.5;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 88%;
+}
+
+.cards img:hover{
+    opacity: 0.5;
+}
+
+footer{
+    margin-top: 100px;
+    padding: 10px;
+    text-align: center;
+    color:  black;
+    font-size: 15px;
+    clear: both;
+}
+
+.socialmedia i{
+    color: rgb(209, 60, 60);
+    
+}
+
+.socialmedia i:hover{
+    opacity: 0.5;
+    color: rgb(0, 8, 255);
+}
+
+.socialmedia{
+    font-size: 30px;
+}
+
+.feedback-container form label {
+    display: block;
+    margin-bottom: 10px; /* Add spacing between each label and input */
+    text-align: center;
+    color: #f3f4f3;
+    font-size: 24px;
+}
+
+.feedback-container form input,
+.feedback-container form textarea {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin: 0 auto 40px; /* Add spacing between each input field */
+}
+
+.feedback-container form button {
+    display: block;
+    padding: 10px 20px;
+    background-color: rgba(255, 0, 0, 0.641);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.feedback-container form button:hover {
+    background-color: #f3f4f3;
+    color: rgba(255, 0, 0, 0.641);
+}
+
+.feedback-container h1 {
+    text-align: center; /* Center the "Feedback Form" text */
+}
+
+footer p{
+    color: white;
+    font-size: 20px;
+}
+/* Add this CSS for smaller screens */
+@media screen and (max-width: 768px) {
+    .nav ul {
+        display: none; /* Hide the navigation links by default */
+        flex-direction: column; /* Display navigation links vertically */
+        text-align: center; /* Center-align the navigation links */
+    }
+
+    .nav ul li {
+        margin-bottom: 10px; /* Add spacing between each navigation link */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show the hamburger menu icon */
+    }
+
+    .top-container {
+        height: auto; /* Allow the top container to adjust its height */
+    }
+
+    .cards .card {
+        width: 100%; /* Adjust the width of the cards to fit the screen */
+        margin-bottom: 20px; /* Add spacing between each card */
+    }
+
+    .socialmedia {
+        flex-direction: column; /* Display social media icons vertically */
+    }
+}
+@media screen and (max-width: 375px) {
+    .beekeeper .poster iframe {
+        float: none; /* Remove the float */
+        margin-top: 0; /* Reset the top margin */
+        margin-bottom: 20px; /* Add some bottom margin for spacing */
+        width: 100%; /* Make the image fill the container width */
+    }
+
+    .beekeeper-info {
+        width: 100%; /* Make the beekeeper info container full width */
+        text-align: center; /* Center-align the content */
+    }
+}
